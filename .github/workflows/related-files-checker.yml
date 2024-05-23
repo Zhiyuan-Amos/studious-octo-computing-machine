@@ -1,0 +1,23 @@
+name: Related Files Checker
+
+on: pull_request
+
+jobs:
+  related-files-checker:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Related Files Checker
+        uses: Zhiyuan-Amos/RelatedFilesPrompt@main
+        with:
+          related-files-file-path: data.json
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
