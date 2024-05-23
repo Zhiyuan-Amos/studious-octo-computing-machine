@@ -1,0 +1,10 @@
+[
+    {
+        "file": "foo.json",
+        "message": "foo"
+    },
+    {
+        "file": "bar.json",
+        "message": "bar"
+    }
+]
