@@ -19,5 +19,4 @@ jobs:
         with:
           related-files-file-path: data.json
           pull-request-url: ${{github.event.pull_request.html_url}}
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
